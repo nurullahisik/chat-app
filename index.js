@@ -6,6 +6,11 @@ let app = express();
 
 app.use(express.static('public'));
 
+app.get('/', function(req, res){
+    
+    res.send("index");
+});
+
 app.get('/room1', function(req, res){
     
     let url = req.url.replace('/', '');
