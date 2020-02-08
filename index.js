@@ -3,6 +3,7 @@ let socket = require('socket.io');
 
 let app = express();
 
+var port = process.env.PORT || 8000;
 
 app.use(express.static('public'));
 
@@ -29,8 +30,8 @@ app.get('/room2', function(req, res){
 
 
 
-let server = app.listen(3000, function(){
-    console.log("3000 port listening...");
+let server = app.listen(port, function(){
+    console.log(port + " port listening...");
 });
 
 
