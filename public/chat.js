@@ -15,7 +15,8 @@ roomTitle.innerHTML = room;
 
 console.log("Room : " + room);
 
-button.addEventListener('click', function(){
+function sendMessage()
+{
     socket.emit('chat-key1', {
         message: message.value,
         title: title.value,
@@ -23,6 +24,16 @@ button.addEventListener('click', function(){
     });
 
     message.value = '';
+}
+
+message.addEventListener('keypress', function(e){
+    if(e && e.keyCode === 13){
+        sendMessage();
+    }
+})
+
+button.addEventListener('click', function(){
+    sendMessage();
 });
 
 message.addEventListener('keypress', function(){
