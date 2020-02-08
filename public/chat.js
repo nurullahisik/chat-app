@@ -1,4 +1,4 @@
-let socket = io.connect(window.location.protocol + "://" + window.location.host);
+let socket = io.connect(window.location.protocol + "//" + window.location.host);
 
 
 let message  = document.getElementById('message');
