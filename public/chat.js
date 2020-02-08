@@ -1,4 +1,4 @@
-let socket = io.connect(window.location.protocol + "://" + window.location.host + (process.env.PORT || 3000));
+let socket = io.connect(window.location.protocol + "://" + window.location.host);
 
 
 let message  = document.getElementById('message');
